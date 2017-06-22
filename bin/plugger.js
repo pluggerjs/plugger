@@ -17,20 +17,16 @@ commander.command('server:start')
   });
 
 commander.command('module:start')
-    .option('-m --module <file>', 'specify a pjs file')
     .option('-s --server <String>', 'specify the server address')
     .option('-n --name <String>', 'specify the module name')
-    .description('start an server instance')
+    .description('start a module instance')
     .action(function(cmd) {
-        process.stdin.resume();
-        process.stdin.setEncoding('utf8');
-
-        cli.startModule(cmd.module, cmd.server, cmd.name);
+        cli.startModule(process.argv[3], cmd.name, cmd.server);
 });
 
 commander.command('module:stop')
     .option('-n --name <String>', 'specify the module name')
-    .description('start an server instance')
+    .description('stop a module instance')
     .action(function(cmd) {
         process.stdin.resume();
         process.stdin.setEncoding('utf8');

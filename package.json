@@ -15,6 +15,7 @@
     "commander": "^2.9.0",
     "pserver": "git+https://github.com/pluggerjs/pserver.git",
     "random-port": "^0.1.0",
+    "semver": "^5.3.0",
     "uuid": "^3.1.0",
     "zmq": "^2.15.3"
   }
