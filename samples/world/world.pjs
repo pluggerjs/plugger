@@ -1,0 +1,14 @@
+{
+  "name": "world",
+  "services": [
+    {
+      "name": "create",
+      "type": "no_callback"
+    },
+    {
+      "name": "read",
+      "type": "async_callback"
+    }
+  ],
+  "_v": "1.2.0"
+}

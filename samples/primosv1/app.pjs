@@ -1,0 +1,10 @@
+{
+  "name": "primo",
+  "services": [
+    {
+      "name": "ehPrimo",
+      "type": "no_callback"
+    }
+  ],
+  "_v": "1.0.0"
+}
