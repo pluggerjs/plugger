@@ -16,12 +16,12 @@ commander.command('server:start')
         cli.startServer(cmd.port);
   });
 
-commander.command('module:start')
+commander.command('module:start <dir>')
     .option('-s --server <String>', 'specify the server address')
     .option('-n --name <String>', 'specify the module name')
     .description('start a module instance')
-    .action(function(cmd) {
-        cli.startModule(process.argv[3], cmd.name, cmd.server);
+    .action(function(cmd, options) {
+        cli.startModule(cmd, options.name, options.server);
 });
 
 commander.command('module:stop')
@@ -32,6 +32,15 @@ commander.command('module:stop')
         process.stdin.setEncoding('utf8');
 
         cli.stopModule(cmd.name);
+});
+
+commander.command('modules:list')
+    .description('list a modules instance')
+    .action(function(cmd) {
+        process.stdin.resume();
+        process.stdin.setEncoding('utf8');
+
+        cli.listModules();
 });
 
 commander.parse(process.argv);
