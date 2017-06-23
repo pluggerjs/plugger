@@ -1,5 +1,6 @@
 {
   "name": "world",
+  "file":"world.js",
   "services": [
     {
       "name": "create",

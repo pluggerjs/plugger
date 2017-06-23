@@ -1,5 +1,6 @@
 {
   "name": "hello",
+  "file": "hello.js",
   "services": [
     {
       "name": "create",

@@ -1,5 +1,6 @@
 {
   "name": "primo",
+  "file": "app.js",
   "services": [
     {
       "name": "ehPrimo",
