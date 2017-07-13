@@ -24,6 +24,7 @@ commander.command('module:start <dir>')
         cli.startModule(cmd, options.name, options.server);
 });
 
+// TODO: should be directly
 commander.command('module:stop')
     .option('-n --name <String>', 'specify the module name')
     .description('stop a module instance')
