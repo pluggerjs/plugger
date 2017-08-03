@@ -18,22 +18,22 @@ commander.command('server:start')
         cli.startServer(cmd.port);
   });
 
-commander.command('run')
+commander.command('service:start')
 .description('start plugger server instance')
 .action(function() {
     process.stdin.resume();
     process.stdin.setEncoding('utf8');
 
-    cli.run();
+    cli.serviceStart();
 });
 
-commander.command('stop')
+commander.command('service:stop')
 .description('stop plugger server instance')
 .action(function() {
     process.stdin.resume();
     process.stdin.setEncoding('utf8');
 
-    cli.stop();
+    cli.serviceStop();
 });
 
 commander.command('module:start <dir>')
@@ -63,6 +63,13 @@ commander.command('modules:list')
 
         cli.listModules();
 });
+
+commander
+  .command('*')
+  .action(function(env){
+    console.log('Invalid parameter');
+    process.exit(1);
+  });
 
 commander.parse(process.argv);
 
