@@ -20,6 +20,7 @@
     "colors": "^1.1.2",
     "commander": "^2.9.0",
     "express": "^4.15.3",
+    "jsonfile": "^3.0.1",
     "pserver": "git+https://github.com/pluggerjs/pserver.git",
     "random-port": "^0.1.0",
     "semver": "^5.3.0",

@@ -18,6 +18,24 @@ commander.command('server:start')
         cli.startServer(cmd.port);
   });
 
+commander.command('run')
+.description('start plugger server instance')
+.action(function() {
+    process.stdin.resume();
+    process.stdin.setEncoding('utf8');
+
+    cli.run();
+});
+
+commander.command('stop')
+.description('stop plugger server instance')
+.action(function() {
+    process.stdin.resume();
+    process.stdin.setEncoding('utf8');
+
+    cli.stop();
+});
+
 commander.command('module:start <dir>')
     .option('-s --server <String>', 'specify the server address')
     .option('-n --name <String>', 'specify the module name')
