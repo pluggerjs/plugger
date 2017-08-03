@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const commander  = require('commander');
 const pkg        = require('../package.json');
 const cli        = require('../lib/interface');
@@ -45,3 +47,5 @@ commander.command('modules:list')
 });
 
 commander.parse(process.argv);
+
+if (!commander.args.length) commander.help();
