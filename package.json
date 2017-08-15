@@ -15,10 +15,12 @@
   "dependencies": {
     "axon": "^2.0.3",
     "axon-rpc": "0.0.3",
+    "body-parser": "^1.17.2",
     "chalk": "^1.1.3",
     "cli-table": "^0.3.1",
     "colors": "^1.1.2",
     "commander": "^2.9.0",
+    "cors": "^2.8.4",
     "express": "^4.15.3",
     "jsonfile": "^3.0.1",
     "pserver": "git+https://github.com/pluggerjs/pserver.git",

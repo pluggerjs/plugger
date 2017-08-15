@@ -1,5 +1,6 @@
 module.exports.dobra = function(a) {
-  var valor = 10 / Number(a);
+  var valor = 2 * Number(a);
+  
   if (isFinite(valor))
     return valor;
   else
