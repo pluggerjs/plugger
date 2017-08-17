@@ -18,6 +18,15 @@ commander.command('server:start')
         cli.startServer(cmd.port);
   });
 
+commander.command('server:stop')
+    .description('stop an server instance')
+    .action(function(cmd) {
+        process.stdin.resume();
+        process.stdin.setEncoding('utf8');
+
+        cli.stopServer();
+    });
+
 commander.command('service:start')
 .description('start plugger server instance')
 .action(function() {
